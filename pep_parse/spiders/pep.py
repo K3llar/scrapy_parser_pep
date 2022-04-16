@@ -31,5 +31,3 @@ class PepSpider(scrapy.Spider):
             'status': status,
         }
         yield PepParseItem(data)
-
-
