@@ -23,7 +23,8 @@ class PepSpider(scrapy.Spider):
 
     def parse_pep(self, response):
         number = response.css('dt:contains("PEP")+dd::text').get()
-        name = response.css('dt:contains("Title")+dd::text').get()
+        name = ('PEP ' + number + ' - ' +
+                response.css('dt:contains("Title")+dd::text').get())
         status = response.css('dt:contains("Status")+dd::text').get()
         data = {
             'number': number,
