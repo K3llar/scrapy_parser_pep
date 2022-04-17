@@ -7,7 +7,6 @@ NEWSPIDER_MODULE = 'pep_parse.spiders'
 
 BASE_DIR = Path(__file__).parent.parent
 
-# Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
